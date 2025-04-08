@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- jQuery CDN -->
+     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 600px;
+            padding: 10px;
+            background: lightcoral;
+           margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, possimus!</p>
+    </div>
+    <button id="appendTo">AppendTo</button>
+    <button id="prependTo">PrependTo</button>
+
+    <script>
+        $(document).ready(function(){
+            $('#appendTo').click(function(){
+                $('<h3> This is Append Text Here </h3>').appendTo('.box');
+            });
+
+            $('#prependTo').click(function(){
+                $('<h3> This is Prepend Text Here </h3>').prependTo('.box');
+            });
+        });
+    </script>
+</body>
+</html>

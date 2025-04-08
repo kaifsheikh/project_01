@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Methods</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <style>
+        #container{
+            width: 450px;
+            border: 2px solid black;
+            text-align: center;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        button{
+            margin-bottom: 10px;
+        }
+
+        .box{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+       <div id="container">
+            <h1>Testing jQuery</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut quasi! Quasi neque in aspernatur dicta quae similique fuga perferendis!</p>
+
+            <!-- <button id="add-class">Add Class</button>
+            <button id="remove-class">Remove Class</button>
+            <button id="toggle-class">Toggle Class</button> -->
+        </div>
+        <button id="btn">All Events Remove</button>
+
+        <script>
+            // $(document).ready(function(){
+            //     $('#add-class').click(function(){
+            //         $('#container').addClass('box');
+            //     });
+
+            //     $('#remove-class').click(function(){
+            //         $('#container').removeClass('box');
+            //     });
+
+            //     $('#toggle-class').click(function(){
+            //         $('#container').toggleClass('box');
+            //     });
+            // });
+
+            $(document).ready(function(){
+                $('#container').on({
+
+                    'click' : function(){
+                        $(this).css('background' , 'orange');
+                    },
+
+                    'mouseover' : function(){
+                        $(this).css('background' , 'red');
+                    },
+
+                    'mouseout' : function(){
+                        $(this).css('background' , 'green');
+                    },
+                });
+
+                $('#btn').click(function(){
+                    $('#container').off('mouseover mouseout click   ')
+                })
+
+            });
+        </script>
+</body>
+</html>
+
+<!-- 
+
+Attr
+html
+text
+addclass
+removeclass
+toggleclass
+-->

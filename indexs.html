@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"></script>
+
+    <style>
+        #container{
+            border: 2px solid black;
+            width: 400px;
+            padding: 10px;
+            text-align: center;
+            margin: auto;
+            border-radius: 10px;
+            background-color: lightcoral;
+        }
+
+        #container-2{
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+        <div id="container">
+            <h1>Heading</h1>
+        </div>
+
+        <!-- <div id="container-2">
+
+        </div> -->
+
+        <!-- <button id="clone">Clone</button> -->
+
+
+        <script>
+                $(document).ready(function(){
+                    // $('#clone').click(function(){
+                    //     $('#container').clone().prependTo('#container-2');
+                    // });
+
+                    $('#container').click(function(){
+                        $('<p> Sample Text Here </p>').prependTo('#container');
+                    });
+                });
+        </script>
+</body>
+</html>

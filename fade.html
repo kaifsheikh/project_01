@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #box{
+            border: 2px solid black;
+            width: 400px;
+            padding: 10px;
+            background: lightcoral;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, possimus!</p>
+    </div>
+
+    <button id="fadeOutBtn">fadeOut</button>
+    <button id="fadeInBtn">fadeIn</button>
+    <button id="fadeToggleBtn">fadeToggle</button>
+    <button id="fadeToBtn">fadeTo</button>
+    <button id="slideUp">Slide Up</button>
+    <button id="slideDown">Slide Down</button>
+    <button id="slideToggle">Slide Toggle</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+            $(document).ready(function(){
+
+                $('#fadeOutBtn').click(function(){
+                    $('#box').fadeOut();
+                });
+
+                $('#fadeInBtn').click(function(){
+                    $('#box').fadeIn();
+                });
+
+                $('#fadeToggleBtn').click(function(){
+                    $('#box').fadeToggle();
+                });
+
+                // $('#fadeToggleBtn').click(function(){
+                //     // $('#box').fadeToggle('slow');
+                //     $('#box').fadeToggle();
+                // });
+                
+                $('#fadeToBtn').click(function(){
+                    $('#box').fadeTo(1000 , 0.5);
+                });
+
+                $('#slideUp').click(function(){
+                    $('#box').slideUp();
+                });
+
+                $('#slideDown').click(function(){
+                    $('#box').slideDown();
+                });
+
+                $('#slideToggle').click(function(){
+                    $('#box').slideToggle();
+                });
+            });
+    </script>
+</body>
+</html>

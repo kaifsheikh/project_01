@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+        <h1>Form Events</h1>
+        <form id="form-submit">
+            <label>Name</label>
+            <input type="text" id="name">
+
+            <label>Password</label>
+            <input type="password" id="password">
+
+            <select id="select">
+                <option disabled>SELECT ANY ONE</option>
+                <option>Pak</option>
+                <option>UK</option>
+                <option>China</option>
+            </select>
+
+            <button type="submit">Submit</button>
+
+            <div id="test" style="border: 2px solid green; margin-top: 20px;"></div>
+        </form>
+
+        <script>
+            $(document).ready(function(){
+                $('#name,#password').focus(function(){ 
+                    $(this).css('background' , 'blue'); // focus : input ka andar Target karta hai
+                    $(this).css('color' , 'white');
+                });
+
+                $('#name,#password').blur(function(){ 
+                    $('#name').css('background' , ''); // blur : jaise he mouse remove karengay tu tu focus remove hojayga.
+                    $('#password').css('background' , '');
+                    $('#name').css('color' , '');
+                    $('#password').css('color' , '');
+                });
+
+                $('#select').change(function(){ 
+                    $(this).css('background' , 'orange'); // change : jaise he select ka option per click hoga oiska color orange hojayga
+                });
+
+                $('#name,#password').select(function(){ 
+                    $(this).css('background' , 'yellow'); // select : jaise he hum input ka text ko select karengay tu bg-color yellow hojayga.
+                });
+
+                $('#select').change(function(){
+                    var a = $(this).val()
+                    $('#test').html(a);
+                });
+
+                $('#form-submit').submit(function(){
+                    alert("Form Submitted Successfully"); // submit : jaisa he form submit hoga Akert msg ajayga.
+                })
+            });
+        </script>
+</body>
+</html>

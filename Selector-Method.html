@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector and Method</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 600px;
+            padding: 10px;
+            background: lightcoral;
+            margin: 20px auto;
+        }
+    </style>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>  
+        <div class="box">
+            <h2>Test Box</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, possimus!</p>
+        </div>
+
+
+        <script>
+            $(document).ready(function(){
+                $('body').keypress(function(){
+                    $('.box').css('background' , 'blue');
+                });
+
+                $('body').keyup(function(){
+                    $('.box').css('background' , 'red');
+                });
+
+                $('body').keydown(function(){
+                    $('.box').css('background' , 'green');
+                });
+            });
+        </script>
+</body>
+</html>
